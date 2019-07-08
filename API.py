@@ -29,18 +29,20 @@ api = Api(app)
 class Shuttles(Resource):
     def get(self):
         infile = r"\\HERTZ2119-X\SAS User Folders\Incremental_Shuttles\Incremental_Shuttle_Data.txt"
-        query =  pd.read_csv(infile, delimiter=',') # This line performs query and returns json result
-        query = query.to_json(orient='columns')
+        #query =  pd.read_csv(infile, delimiter=',') # This line performs query and returns json result
+        #query = query.to_json(orient='columns')
+        query = "HEllo World"
         return query
     
     
 class Rentals_Returns(Resource):
     def get(self,Location):
         infile = r"\\HERTZ2119-X\SAS User Folders\RentalsReturns_Location\Rental_Return_Forecast.txt"
-        query =  pd.read_csv(infile, delimiter=',') # This line performs query and returns json result
-        query['LOC'] = query['LOC'].str.strip()
-        query = query[query['LOC']==Location]
-        query = query.to_json(orient='columns')
+        #query =  pd.read_csv(infile, delimiter=',') # This line performs query and returns json result
+        #query['LOC'] = query['LOC'].str.strip()
+        #query = query[query['LOC']==Location]
+        #query = query.to_json(orient='columns')
+        query = "HEllo World"
         return query
 
 
